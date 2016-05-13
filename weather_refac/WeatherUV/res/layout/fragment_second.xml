@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_second_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp" >
+
+                <TextView
+                    android:id="@+id/tv_area_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="서울특별시"
+                    android:textColor="#fff"
+                    android:textSize="17dp" />
+
+                <Button
+                    android:id="@+id/bt_search"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_area_name"
+                    android:background="@drawable/location" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="65dp"
+                android:text="TODAY"
+                android:textColor="#fff" />
+
+            <RelativeLayout
+                android:id="@+id/holo_today"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="140dp" >
+
+                <de.passsy.holocircularprogressbar.HoloCircularProgressBar
+                    android:id="@+id/progress_today"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:layout_width="240dp"
+                    android:layout_height="240dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/blur" />
+
+                <View
+                    android:id="@+id/today_tip"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_today_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/today_tip"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#fff"
+                    android:textSize="45dp" />
+
+                <TextView
+                    android:id="@+id/tv_today_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/today_tip"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#fff"
+                    android:textSize="30dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/today"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/holo_today"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_today_spf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/sun"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center_vertical"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_today_conduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:drawableLeft="@drawable/clock"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="아침에 1번, 점심에 1번"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/holo_today"
+                android:layout_marginTop="350dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="TOMORROW"
+                    android:textColor="#fff" />
+
+                <View
+                    android:id="@+id/tip"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerHorizontal="true" />
+
+                <RelativeLayout
+                    android:id="@+id/holo_tomorrow"
+                    android:layout_width="150dp"
+                    android:layout_height="450dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toLeftOf="@id/tip" >
+
+                    <TextView
+                        android:id="@+id/tv_tomorrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        android:text="내일"
+                        android:textColor="#fff"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/tv_tomorrow_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_tomorrow"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="45dp"
+                        android:textColor="#fff"
+                        android:textSize="50dp" />
+
+                    <de.passsy.holocircularprogressbar.HoloCircularProgressBar
+                        android:id="@+id/progress_tomorrow"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_below="@id/tv_tomorrow"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_tomorrow_blur"
+                        android:layout_width="115dp"
+                        android:layout_height="115dp"
+                        android:layout_below="@id/tv_tomorrow"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/blur" />
+
+                    <TextView
+                        android:id="@+id/tv_tomorrow_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/progress_tomorrow"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#fff"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tv_tomorrow_spf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_tomorrow_message"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#fff"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/holo_after_tomorrow"
+                    android:layout_width="150dp"
+                    android:layout_height="450dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toRightOf="@id/tip" >
+
+                    <TextView
+                        android:id="@+id/tv_after_tomorrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        android:text="모레"
+                        android:textColor="#fff"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/tv_after_tomorrow_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_after_tomorrow"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="45dp"
+                        android:textColor="#fff"
+                        android:textSize="50dp" />
+
+                    <de.passsy.holocircularprogressbar.HoloCircularProgressBar
+                        android:id="@+id/progress_after_tomorrow"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_below="@id/tv_after_tomorrow"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="20dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_after_tomorrow_blur"
+                        android:layout_width="115dp"
+                        android:layout_height="115dp"
+                        android:layout_below="@id/tv_after_tomorrow"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/blur" />
+
+                    <TextView
+                        android:id="@+id/tv_after_tomorrow_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/progress_after_tomorrow"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#fff"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tv_after_tomorrow_spf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_after_tomorrow_message"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#fff"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
